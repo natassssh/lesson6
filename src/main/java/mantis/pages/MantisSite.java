@@ -9,7 +9,7 @@ public class MantisSite {
     private MainPage mainPage;
     private ViewIssuesPage viewIssuesPage;
     private ReportIssuePage reportIssuePage;
-    private SureToDeletePage sureToDeletePage;
+    private DeletionConfirmationPage deletionConfirmationPage;
 
     public MantisSite(WebDriver driver) {
         this.driver = driver;
@@ -19,7 +19,7 @@ public class MantisSite {
         mainPage = new MainPage(driver);
         viewIssuesPage = new ViewIssuesPage(driver);
         reportIssuePage = new ReportIssuePage(driver);
-        sureToDeletePage = new SureToDeletePage(driver);
+        deletionConfirmationPage = new DeletionConfirmationPage(driver);
     }
 
     public void login(String login, String password) {
@@ -47,7 +47,7 @@ public class MantisSite {
         return reportIssuePage;
     }
 
-    public SureToDeletePage getSureToDeletePage() {
-        return sureToDeletePage;
+    public DeletionConfirmationPage getDeletionConfirmationPage() {
+        return deletionConfirmationPage;
     }
 }

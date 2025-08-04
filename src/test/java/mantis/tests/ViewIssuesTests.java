@@ -40,7 +40,7 @@ public class ViewIssuesTests extends BaseTest {
         softAssert.assertThat(id).isEqualTo(mantisSite.getViewIssuePage().getFirstId());
 
         mantisSite.getViewIssuePage().deleteLastIssue();
-        mantisSite.getSureToDeletePage().sureToDelete();
+        mantisSite.getDeletionConfirmationPage().sureToDelete();
 
         softAssert.assertThat(mantisSite.getViewIssuePage().getFirstId()).isNotEqualTo(id);
         softAssert.assertAll();
